@@ -14,7 +14,7 @@ module Enumerable
         
     end
 
-    def my_each_width_index(array)
+    def my_each_with_index(array)
     
         size = array.size
     
@@ -28,13 +28,13 @@ module Enumerable
 
     def my_select(array)
         
-        newArray = []
+        new_array = []
         
         array.each do |element|
-            newArray.push(element) if yield(element)
+            new_array.push(element) if yield(element)
         end
         
-        return newArray
+        return new_array
         
     end
 
