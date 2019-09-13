@@ -34,3 +34,5 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 Layout/IndentationWidth:
   Width: 4
+Layout/TrailingWhitespace:
+  Enabled: false
