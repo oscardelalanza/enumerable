@@ -1,8 +1,20 @@
 # frozen_string_literal: true
 
 module Enumerable
-
-    def my_each; end
+    
+    def my_each(array)
+        
+        size = array.size
+        index = 0
+        
+        while index < size
+            
+            yield(array[index])
+            index += 1
+            
+        end
+        
+    end
 
     def my_each_width_index; end
 
