@@ -5,24 +5,18 @@ module Enumerable
     def my_each(array)
         
         size = array.size
+        index = 0
         
-        for index in range 0 ... size
-            
-            yield(array[index])
-            
-        end
+        yield(array[index]) while index < size
         
     end
 
     def my_each_with_index(array)
     
         size = array.size
-    
-        for index in range 0 ... size
+        index = 0
         
-            yield(array[index])
-    
-        end
+        yield(array[index], index) while index < size
         
     end
 
@@ -34,7 +28,7 @@ module Enumerable
             new_array.push(element) if yield(element)
         end
         
-        return new_array
+        new_array
         
     end
 
