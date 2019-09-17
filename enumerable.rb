@@ -2,6 +2,8 @@
 
 module Enumerable
     
+    def initialize; end
+    
     def my_each(array)
         
         size = array.size
@@ -103,15 +105,27 @@ module Enumerable
         new_array
         
     end
-
-    def my_inject(base, array)
+    
+    def my_inject
         
-        array.each do |element|
+        base = self[0]
+        
+        each do |element|
             
             base = yield(base, element)
             
         end
         
     end
-
+    
+    def multiply_els(array)
+        
+        array.my_inject do |base, element|
+            
+            base * element
+            
+        end
+        
+    end
+    
 end
