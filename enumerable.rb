@@ -32,7 +32,14 @@ module Enumerable
         
     end
 
-    def my_all; end
+    def my_all(array)
+        
+        all_true = true
+        array.each { |x| all_true = false unless yield(x) }
+        
+        all_true
+        
+    end
 
     def my_any; end
 
