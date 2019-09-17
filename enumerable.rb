@@ -2,31 +2,29 @@
 
 module Enumerable
     
-    def initialize; end
-    
-    def my_each(array)
+    def my_each
         
-        size = array.size
+        size = self.size
         index = 0
         
-        yield(array[index]) while index < size
+        yield(self[index]) while index < size
         
     end
 
-    def my_each_with_index(array)
+    def my_each_with_index
     
-        size = array.size
+        size = self.size
         index = 0
         
-        yield(array[index], index) while index < size
+        yield(self[index], index) while index < size
         
     end
 
-    def my_select(array)
+    def my_select
         
         new_array = []
 
-        my_each(array) do |element|
+        my_each do |element|
             
             new_array.push(element) if yield(element)
             
@@ -36,11 +34,11 @@ module Enumerable
         
     end
 
-    def my_all(array)
+    def my_all
         
         all_true = true
 
-        my_each(array) do |element|
+        my_each do |element|
             
             all_true = false unless yield(element)
             
@@ -50,11 +48,11 @@ module Enumerable
         
     end
 
-    def my_any(array)
+    def my_any
         
         any = false
 
-        my_each(array) do |element|
+        my_each do |element|
             
             any = true if yield(element)
             
@@ -64,11 +62,11 @@ module Enumerable
         
     end
 
-    def my_none(array)
+    def my_none
         
         none = true
 
-        my_each(array) do |element|
+        my_each do |element|
             
             none = false if yield(element)
             
@@ -78,11 +76,11 @@ module Enumerable
     
     end
 
-    def my_count(array)
+    def my_count
         
         total = 0
 
-        my_each(array) do |element|
+        my_each do |element|
             
             total += 1 if yield(element)
             
@@ -92,11 +90,11 @@ module Enumerable
         
     end
 
-    def my_map(array)
+    def my_map
         
         new_array = []
 
-        my_each(array) do |element|
+        my_each do |element|
             
             new_array.push(yield(element))
             
@@ -106,11 +104,11 @@ module Enumerable
         
     end
     
-    def my_inject(array)
+    def my_inject
         
         base = array[0]
         
-        my_each(array) do |element|
+        my_each do |element|
             
             base = yield(base, element)
             
@@ -120,9 +118,9 @@ module Enumerable
         
     end
     
-    def multiply_els(array)
+    def multiply_els
         
-        my_inject(array) do |base, element|
+        my_inject do |base, element|
             
             base * element
             
