@@ -68,7 +68,19 @@ module Enumerable
     
     end
 
-    def my_count; end
+    def my_count(array)
+        
+        total = 0
+        
+        array.each do |element|
+            
+            total += 1 if yield(element)
+            
+        end
+        
+        total
+        
+    end
 
     def my_map; end
 
