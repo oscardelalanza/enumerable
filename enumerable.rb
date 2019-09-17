@@ -100,13 +100,13 @@ module Enumerable
         
     end
 
-    def my_map
+    def my_map (&my_proc)
         
         new_array = []
 
         my_each do |element|
             
-            new_array.push(yield(element))
+            new_array.push(my_proc.call(element))
             
         end
         
