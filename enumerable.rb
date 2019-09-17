@@ -35,13 +35,26 @@ module Enumerable
     def my_all(array)
         
         all_true = true
-        array.each { |x| all_true = false unless yield(x) }
+        
+        array.each do |element|
+            all_true = false unless yield(element)
+        end
         
         all_true
         
     end
 
-    def my_any; end
+    def my_any(array)
+        
+        any = false
+        
+        array.each do |element|
+            any = true if yield(element)
+        end
+        
+        any
+        
+    end
 
     def my_none; end
 
