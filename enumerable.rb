@@ -116,7 +116,7 @@ module Enumerable
     
     def my_inject
         
-        base = array[0]
+        base = self[0]
         
         my_each do |element|
             
@@ -128,9 +128,9 @@ module Enumerable
         
     end
     
-    def multiply_els
+    def multiply_els(array)
         
-        my_inject do |base, element|
+        array.my_inject do |base, element|
             
             base * element
             
