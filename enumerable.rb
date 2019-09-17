@@ -25,8 +25,8 @@ module Enumerable
     def my_select(array)
         
         new_array = []
-        
-        array.each do |element|
+
+        my_each(array) do |element|
             
             new_array.push(element) if yield(element)
             
@@ -39,8 +39,8 @@ module Enumerable
     def my_all(array)
         
         all_true = true
-        
-        array.each do |element|
+
+        my_each(array) do |element|
             
             all_true = false unless yield(element)
             
@@ -53,8 +53,8 @@ module Enumerable
     def my_any(array)
         
         any = false
-        
-        array.each do |element|
+
+        my_each(array) do |element|
             
             any = true if yield(element)
             
@@ -67,8 +67,8 @@ module Enumerable
     def my_none(array)
         
         none = true
-        
-        array.each do |element|
+
+        my_each(array) do |element|
             
             none = false if yield(element)
             
@@ -81,8 +81,8 @@ module Enumerable
     def my_count(array)
         
         total = 0
-        
-        array.each do |element|
+
+        my_each(array) do |element|
             
             total += 1 if yield(element)
             
@@ -95,8 +95,8 @@ module Enumerable
     def my_map(array)
         
         new_array = []
-        
-        array.each do |element|
+
+        my_each(array) do |element|
             
             new_array.push(yield(element))
             
@@ -106,21 +106,23 @@ module Enumerable
         
     end
     
-    def my_inject
+    def my_inject(array)
         
-        base = self[0]
+        base = array[0]
         
-        each do |element|
+        my_each(array) do |element|
             
             base = yield(base, element)
             
         end
         
+        base
+        
     end
     
     def multiply_els(array)
         
-        array.my_inject do |base, element|
+        my_inject(array) do |base, element|
             
             base * element
             
@@ -129,3 +131,5 @@ module Enumerable
     end
     
 end
+
+puts multiply_els([2, 4, 5])
