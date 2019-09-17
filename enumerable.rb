@@ -25,7 +25,9 @@ module Enumerable
         new_array = []
         
         array.each do |element|
+            
             new_array.push(element) if yield(element)
+            
         end
         
         new_array
@@ -37,7 +39,9 @@ module Enumerable
         all_true = true
         
         array.each do |element|
+            
             all_true = false unless yield(element)
+            
         end
         
         all_true
@@ -49,7 +53,9 @@ module Enumerable
         any = false
         
         array.each do |element|
+            
             any = true if yield(element)
+            
         end
         
         any
@@ -61,7 +67,9 @@ module Enumerable
         none = true
         
         array.each do |element|
+            
             none = false if yield(element)
+            
         end
         
         none
@@ -86,12 +94,24 @@ module Enumerable
         
         new_array = []
         
-        array.each { |element| new_array.push(yield(element)) }
+        array.each do |element|
+            
+            new_array.push(yield(element))
+            
+        end
         
         new_array
         
     end
 
-    def my_inject; end
+    def my_inject(base, array)
+        
+        array.each do |element|
+            
+            base = yield(base, element)
+            
+        end
+        
+    end
 
 end
