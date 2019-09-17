@@ -56,7 +56,17 @@ module Enumerable
         
     end
 
-    def my_none; end
+    def my_none(array)
+        
+        none = true
+        
+        array.each do |element|
+            none = false if yield(element)
+        end
+        
+        none
+    
+    end
 
     def my_count; end
 
