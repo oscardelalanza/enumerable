@@ -82,7 +82,15 @@ module Enumerable
         
     end
 
-    def my_map; end
+    def my_map(array)
+        
+        new_array = []
+        
+        array.each { |element| new_array.push(yield(element)) }
+        
+        new_array
+        
+    end
 
     def my_inject; end
 
