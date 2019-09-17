@@ -7,7 +7,12 @@ module Enumerable
         size = self.size
         index = 0
         
-        yield(self[index]) while index < size
+        while index < size
+            
+            yield(self[index])
+            i += 1
+            
+        end
         
     end
 
@@ -16,7 +21,12 @@ module Enumerable
         size = self.size
         index = 0
         
-        yield(self[index], index) while index < size
+        while index < size
+            
+            yield(self[index], index)
+            i += 1
+            
+        end
         
     end
 
