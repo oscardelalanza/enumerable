@@ -10,7 +10,7 @@ module Enumerable
         while index < size
             
             yield(self[index])
-            i += 1
+            index += 1
             
         end
         
@@ -24,7 +24,7 @@ module Enumerable
         while index < size
             
             yield(self[index], index)
-            i += 1
+            index += 1
             
         end
         
@@ -48,10 +48,22 @@ module Enumerable
         
         all_true = true
 
-        my_each do |element|
-            
-            all_true = false unless yield(element)
-            
+        if block_given?
+
+            my_each do |element|
+
+                all_true = false unless yield(element)
+
+            end
+
+        else
+
+            my_each do |element|
+
+                all_true = false unless element
+
+            end
+
         end
         
         all_true
@@ -112,14 +124,6 @@ module Enumerable
                 
             end
             
-        else
-            
-            my_each do |element|
-                
-                new_array.push(yield(element))
-                
-            end
-            
         end
         
         new_array
@@ -140,16 +144,5 @@ module Enumerable
         
     end
     
-    def multiply_els(array)
-        
-        array.my_inject do |base, element|
-            
-            base * element
-            
-        end
-        
-    end
-    
 end
 
-puts multiply_els([2, 4, 5])
