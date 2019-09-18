@@ -44,7 +44,7 @@ module Enumerable
         
     end
 
-    def my_all
+    def my_all(val = nil)
         
         all_true = true
 
@@ -53,6 +53,14 @@ module Enumerable
             my_each do |element|
 
                 all_true = false unless yield(element)
+
+            end
+
+        elsif val
+
+            my_each do |element|
+
+                all_true = false unless element == val
 
             end
 
