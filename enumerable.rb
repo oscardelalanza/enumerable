@@ -160,4 +160,3 @@ module Enumerable
     end
     
 end
-
