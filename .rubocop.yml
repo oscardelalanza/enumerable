@@ -38,3 +38,5 @@ Layout/TrailingWhitespace:
   Enabled: false
 Layout/EmptyLinesAroundBlockBody:
   Enabled: false
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: false
