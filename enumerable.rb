@@ -142,9 +142,8 @@ module Enumerable
         
     end
     
-    def my_inject
-        
-        base = self[0]
+    def my_inject(base)
+
         if block_given?
 
             my_each do |element|
@@ -160,3 +159,11 @@ module Enumerable
     end
     
 end
+
+def multiply_els(base, array)
+
+    array.my_inject(base) { |b, element| b * element }
+
+end
+
+puts multiply_els(1, [2, 4, 5])
