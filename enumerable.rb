@@ -70,7 +70,7 @@ module Enumerable
         
     end
 
-    def my_any (val = nil)
+    def my_any(val = nil)
         
         any = false
 
