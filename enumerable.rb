@@ -145,11 +145,14 @@ module Enumerable
     def my_inject
         
         base = self[0]
-        
-        my_each do |element|
-            
-            base = yield(base, element)
-            
+        if block_given?
+
+            my_each do |element|
+
+                base = yield(base, element)
+
+            end
+
         end
         
         base
