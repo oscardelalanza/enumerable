@@ -127,6 +127,14 @@ module Enumerable
                 new_array.push(my_proc.call(element))
                 
             end
+
+        else
+
+            my_each do |element|
+
+                new_array.push(yield(element))
+
+            end
             
         end
         
