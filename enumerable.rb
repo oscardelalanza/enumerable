@@ -70,7 +70,7 @@ module Enumerable
         
     end
 
-    def my_any
+    def my_any (val = nil)
         
         any = false
 
@@ -79,6 +79,14 @@ module Enumerable
             my_each do |element|
 
                 any = true if yield(element)
+
+            end
+
+        elsif val
+
+            my_each do |element|
+
+                any = true if element == val
 
             end
 
