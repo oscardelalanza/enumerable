@@ -102,12 +102,16 @@ module Enumerable
         
         total = 0
 
-        my_each do |element|
-            
-            total += 1 if yield(element)
-            
+        if block_given?
+
+            my_each do |element|
+
+                total += 1 if yield(element)
+
+            end
+
         end
-        
+
         total
         
     end
