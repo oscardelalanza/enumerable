@@ -56,14 +56,6 @@ module Enumerable
 
             end
 
-        else
-
-            my_each do |element|
-
-                all_true = false unless element
-
-            end
-
         end
         
         all_true
@@ -74,10 +66,14 @@ module Enumerable
         
         any = false
 
-        my_each do |element|
-            
-            any = true if yield(element)
-            
+        if block_given?
+
+            my_each do |element|
+
+                any = true if yield(element)
+
+            end
+
         end
         
         any
