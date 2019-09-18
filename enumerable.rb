@@ -84,12 +84,16 @@ module Enumerable
         
         none = true
 
-        my_each do |element|
-            
-            none = false if yield(element)
-            
+        if block_given?
+
+            my_each do |element|
+
+                none = false if yield(element)
+
+            end
+
         end
-        
+
         none
     
     end
