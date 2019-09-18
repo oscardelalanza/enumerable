@@ -122,7 +122,7 @@ module Enumerable
     
     end
 
-    def my_count
+    def my_count(val = nil)
         
         total = 0
 
@@ -131,6 +131,14 @@ module Enumerable
             my_each do |element|
 
                 total += 1 if yield(element)
+
+            end
+
+        elsif val
+
+            my_each do |element|
+
+                total += 1 if element == val
 
             end
 
