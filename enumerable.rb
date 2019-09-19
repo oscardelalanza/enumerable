@@ -202,6 +202,7 @@ module Enumerable
         
     end
     
+    # TODO: fix inject method
     def my_inject(base)
 
         if block_given?
