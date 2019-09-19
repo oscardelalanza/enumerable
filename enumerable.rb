@@ -160,7 +160,7 @@ module Enumerable
             
         else
             
-            total = self.length
+            total = length
 
         end
 
