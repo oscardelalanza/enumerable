@@ -42,3 +42,5 @@ Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 Layout/EmptyLinesAroundMethodBody:
   Enabled: false
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
