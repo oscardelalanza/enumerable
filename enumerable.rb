@@ -157,6 +157,10 @@ module Enumerable
                 total += 1 if element == val
 
             end
+            
+        else
+            
+            total = self.length
 
         end
 
