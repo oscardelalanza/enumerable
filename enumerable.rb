@@ -63,6 +63,14 @@ module Enumerable
                 all_true = false unless element == val
 
             end
+            
+        else
+            
+            my_each do |element|
+                
+                all_true = false unless element
+                
+            end
 
         end
         
