@@ -131,6 +131,14 @@ module Enumerable
                 none = false if element == val
 
             end
+            
+        else
+            
+            my_each do |element|
+                
+                none = false if element
+                
+            end
 
         end
 
