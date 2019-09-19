@@ -97,7 +97,15 @@ module Enumerable
                 any = true if element == val
 
             end
-
+            
+        else
+            
+            my_each do |element|
+                
+                any = true if element
+                
+            end
+            
         end
         
         any
