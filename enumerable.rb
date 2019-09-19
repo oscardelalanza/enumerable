@@ -202,29 +202,46 @@ module Enumerable
 
     end
 
-    # TODO: fix inject method
-    def my_inject(base)
+    def my_inject(init = nil, proc = nil)
 
-        if block_given?
+        if init && block_given?
 
             my_each do |element|
 
-                base = yield(base, element)
+                init = yield(init, element)
+
+            end
+
+        elsif init.nil? && block_given?
+
+            init = self[0]
+
+            my_each_with_index do |element, index|
+
+                init = yield(init, element) unless index.zero?
+
+            end
+
+        else
+
+            my_each do |element|
+
+                init = proc.to_proc.call(init, element)
 
             end
 
         end
 
-        base
+        init
 
     end
 
 end
 
-def multiply_els(base, array)
+def multiply_els(array)
 
-    array.my_inject(base) { |b, element| b * element }
+    array.my_inject { |b, element| b * element }
 
 end
 
-puts multiply_els(1, [2, 4, 5])
+puts multiply_els([2, 4, 5])
