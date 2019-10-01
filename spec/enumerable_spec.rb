@@ -41,6 +41,11 @@ RSpec.describe Enumerable do
             array.my_select { |x| array_new.push(x) if x.is_a? Integer }
             expect(array_new).to eql([1, 2, 3, 4])
         end
+
+        it 'return all the even values' do
+            array.my_select { |x| array_new.push x if x.even? }
+            expect(array_new).to eql([2, 4])
+        end
     
     end
     
