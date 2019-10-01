@@ -9,7 +9,7 @@ RSpec.describe Enumerable do
     
     context '#my_each' do
         
-        it 'iterates through an object' do
+        it 'iterates through an iterable object' do
             array.my_each { |x| array_new.push(x) }
             expect(array_new).to eql([1, 2, 3, 4])
         end
@@ -17,6 +17,15 @@ RSpec.describe Enumerable do
         it 'accepts blocks and apply it to all the elements' do
             array.my_each { |x| array_new.push(x * 5) }
             expect(array_new).to eql([5, 10, 15, 20])
+        end
+        
+    end
+    
+    context '#my_each_with_index' do
+        
+        it 'iterates through an iterable object and return the actual index' do
+            array.my_each_with_index { |x, i| array_new.push(i) }
+            expect(array_new).to eql([0, 1, 2, 3])
         end
         
     end
