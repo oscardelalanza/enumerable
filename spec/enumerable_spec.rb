@@ -28,6 +28,11 @@ RSpec.describe Enumerable do
             expect(array_new).to eql([0, 1, 2, 3])
         end
         
+        it 'accepts blocks and apply it to all the elements operating with the index' do
+            array.my_each_with_index { |x, i| array_new.push(x) if i.even? }
+            expect(array_new).to eql([1, 3])
+        end
+        
     end
     
 end
