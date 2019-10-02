@@ -81,7 +81,7 @@ RSpec.describe Enumerable do
         
     end
     
-    context '#my_nonce' do
+    context '#my_none' do
       
         it 'verify if all the elements are false or nil' do
             expect(array.my_none).to eql(false)
