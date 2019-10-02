@@ -59,6 +59,9 @@ RSpec.describe Enumerable do
             expect(array.my_all(3)).to eql(false)
         end
         
+        it 'accepts blocks' do
+            expect(array.my_all { |x| x.is_a? Integer }).to eql(true)
+        end
     end
     
 end
