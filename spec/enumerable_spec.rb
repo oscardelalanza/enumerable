@@ -86,7 +86,10 @@ RSpec.describe Enumerable do
         it 'verify if all the elements are false or nil' do
             expect(array.my_none).to eql(false)
         end
-        
+
+        it 'verify if a given parameter is not contained in the object' do
+            expect(array.my_none('a')).to eql(true)
+        end
         
     end
     
