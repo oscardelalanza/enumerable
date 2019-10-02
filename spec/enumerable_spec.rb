@@ -121,4 +121,12 @@ RSpec.describe Enumerable do
         
     end
     
+    context '#my_inject' do
+      
+        it 'accumulate all the values in the array' do
+            expect(array.my_inject(0) { |x, y| x + y }).to eql(10)
+        end
+        
+    end
+    
 end
