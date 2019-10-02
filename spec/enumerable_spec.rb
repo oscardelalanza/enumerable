@@ -113,4 +113,12 @@ RSpec.describe Enumerable do
         
     end
     
+    context '#my_map' do
+      
+        it 'accepts a block and apply it to all the elements of an array' do
+            expect(array.my_map { |x| x * 10 }).to eql([10, 20, 30, 40])
+        end
+        
+    end
+    
 end
