@@ -24,7 +24,7 @@ RSpec.describe Enumerable do
     context '#my_each_with_index' do
         
         it 'iterates through an iterable object and return the actual index' do
-            array.my_each_with_index { |x, i| array_new.push(i) }
+            array.my_each_with_index { |_x, i| array_new.push(i) }
             expect(array_new).to eql([0, 1, 2, 3])
         end
         
