@@ -71,6 +71,10 @@ RSpec.describe Enumerable do
             expect(array.my_any).to eql(true)
         end
         
+        it 'verify if an array at least has a value equal to a given parameter' do
+            expect(array.my_any(3)).to eql(true)
+        end
+        
     end
     
 end
