@@ -91,6 +91,10 @@ RSpec.describe Enumerable do
             expect(array.my_none('a')).to eql(true)
         end
         
+        it 'accept blocks' do
+            expect(array.my_none{ |x| x < 0 }).to eql(true)
+        end
+        
     end
     
 end
