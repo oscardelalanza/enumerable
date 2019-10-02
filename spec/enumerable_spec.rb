@@ -97,4 +97,12 @@ RSpec.describe Enumerable do
         
     end
     
+    context '#my_count' do
+        
+        it 'count all the elements of an array' do
+            expect(array.my_count).to eql(4)
+        end
+        
+    end
+    
 end
