@@ -126,6 +126,10 @@ RSpec.describe Enumerable do
         it 'accumulate all the values in the array' do
             expect(array.my_inject(0) { |x, y| x + y }).to eql(10)
         end
+
+        it 'accumulate the product of all elements in the array' do
+            expect(array.my_inject(1) { |x, y| x * y }).to eql(24)
+        end
         
     end
     
