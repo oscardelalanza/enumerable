@@ -49,4 +49,12 @@ RSpec.describe Enumerable do
     
     end
     
+    context '#my_all' do
+        
+        it 'check if any of the values are nil or false' do
+            expect(array.my_all).to eql(true)
+        end
+        
+    end
+    
 end
