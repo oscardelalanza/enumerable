@@ -62,6 +62,15 @@ RSpec.describe Enumerable do
         it 'accepts blocks' do
             expect(array.my_all { |x| x.is_a? Integer }).to eql(true)
         end
+        
+    end
+    
+    context '#my_any' do
+        
+        it 'check if an array at least has a true value' do
+            expect(array.my_any).to eql(true)
+        end
+        
     end
     
 end
