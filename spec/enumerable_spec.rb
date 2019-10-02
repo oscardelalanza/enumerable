@@ -55,6 +55,10 @@ RSpec.describe Enumerable do
             expect(array.my_all).to eql(true)
         end
         
+        it 'check if all the values are equal to a parameter' do
+            expect(array.my_all(3)).to eql(false)
+        end
+        
     end
     
 end
