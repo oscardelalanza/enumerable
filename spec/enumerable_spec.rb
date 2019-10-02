@@ -92,7 +92,7 @@ RSpec.describe Enumerable do
         end
         
         it 'accept blocks' do
-            expect(array.my_none{ |x| x < 0 }).to eql(true)
+            expect(array.my_none { |x| x < 0 }).to eql(true)
         end
         
     end
