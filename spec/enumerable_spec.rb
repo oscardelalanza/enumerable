@@ -74,6 +74,19 @@ RSpec.describe Enumerable do
         it 'verify if an array at least has a value equal to a given parameter' do
             expect(array.my_any(3)).to eql(true)
         end
+
+        it 'it accepts blocks' do
+            expect(array.my_any { |x| x > 2 }).to eql(true)
+        end
+        
+    end
+    
+    context '#my_nonce' do
+      
+        it 'verify if all the elements are false or nil' do
+            expect(array.my_none).to eql(false)
+        end
+        
         
     end
     
