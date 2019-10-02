@@ -103,6 +103,10 @@ RSpec.describe Enumerable do
             expect(array.my_count).to eql(4)
         end
         
+        it 'count all the elements equal to a given parameter' do
+            expect(array.my_count(3)).to eql(1)
+        end
+        
     end
     
 end
