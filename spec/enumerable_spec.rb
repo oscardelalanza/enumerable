@@ -107,6 +107,10 @@ RSpec.describe Enumerable do
             expect(array.my_count(3)).to eql(1)
         end
         
+        it 'accepts parameters' do
+            expect(array.my_count { |x| x > 2 }).to eql(2)
+        end
+        
     end
     
 end
