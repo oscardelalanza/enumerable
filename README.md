@@ -13,7 +13,7 @@ You can find the original description of this project here:
 
 ## Getting Started
 
-This project consists in the implementation of the following methods of Ruby `Enumerable` class
+This project consists of the implementation of the following methods of Ruby `Enumerable` class
 - `each`
 - `each_with_index`
 - `select`
