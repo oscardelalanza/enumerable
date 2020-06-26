@@ -44,8 +44,9 @@ To clone the project in your local environment do the following
 
 ### Usage
 
-Copy and paste `enumerable.rb` file to your current project. Then import `Enumerable` module in your main class with 
+Copy and paste `enumerable.rb` file to your current project. Then import the `Enumerable` module in your main class with 
 `require_relative 'enumerable'`.
+
 For a better understanding of how enumerable module works, check the following `IRB` examples of usage.
 
 ### Run tests
