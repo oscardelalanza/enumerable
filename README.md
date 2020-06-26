@@ -61,6 +61,9 @@ For a better understanding of how enumerable module works, check the following `
 - `my_select` returns an array with all the values that a given block returns `true`
 ![my_select](screenshots/my-select.png)
 
+- `my_all` returns `true` if all elements evaluated in a given block return true
+![my_all](screenshots/my-all.png) 
+
 
 ### Run tests
 
