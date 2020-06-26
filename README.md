@@ -67,8 +67,7 @@ For a better understanding of how enumerable module works, check the following `
 - `my_all` returns `true` if all elements evaluated in a given block return true
 ![my_all](screenshots/my-all.png) 
 
-You can follow the examples to apply the remaining methods. For a deeper understanding check this link 
-[Enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html)
+You can follow this examples to use the remaining methods. For a deeper understanding check this link [Enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html)
 
 ### Run tests
 
