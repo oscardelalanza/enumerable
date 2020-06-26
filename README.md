@@ -58,6 +58,9 @@ For a better understanding of how enumerable module works, check the following `
 - `my_each_with_index` calls the given block once for each element and its index in the array
 ![my_each_index](screenshots/my-each-index.png)  
 
+- `my_select` returns an array with all the values that a given block returns `true`
+![my_select](screenshots/my-select.png)
+
 
 ### Run tests
 
