@@ -5,7 +5,7 @@
 > This is my own implementation of Ruby's enumerable methods. The goal of the project is to get a deep understanding of how basic enumerable methods work.
 
 
-![screenshot](enum.png)
+![screenshot](screenshots/enum.png)
 
 You can find the original description of this project here: 
 [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks)
@@ -45,8 +45,8 @@ To clone the project in your local environment do the following
 ### Usage
 
 Copy and paste `enumerable.rb` file to your current project. Then import `Enumerable` module in your main class with 
-`require_relative 'enumerable'`
-
+`require_relative 'enumerable'`.
+For a better understanding of how enumerable module works, check the following `IRB` examples of usage.
 
 ### Run tests
 
