@@ -52,7 +52,7 @@ For a better understanding of how enumerable module works, check the following `
 - Importing the `Enumerable` module
 ![import](screenshots/import.png)
 
-- `my_each`
+- `my_each` loops through all the elements inside an array
 ![my_each](screenshots/my_each.png)
 
 
