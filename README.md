@@ -4,6 +4,8 @@
 
 > This is my own implementation of  Ruby's enumerable methods 
 
+![screenshot](enum.png)
+
 You can find the original description of this project here: 
 [The Odin Project](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks)
 
