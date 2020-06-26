@@ -42,10 +42,13 @@ To clone the project in your local environment do the following
 - Run the command `git clone git@github.com:oscardelalanza/enumerable.git`
 - Run the command `cd enumerable` to enter the project directory
 
-### Usage
+### Installation
 
-Copy and paste `enumerable.rb` file to your current project. Then import the `Enumerable` module in your main class with 
+- Copy and paste `enumerable.rb` file to your current project. Then import the `Enumerable` module in your main class with 
 `require_relative 'enumerable'`.
+
+
+### Usage
 
 For a better understanding of how enumerable module works, check the following `IRB` examples of usage.
 
@@ -64,10 +67,16 @@ For a better understanding of how enumerable module works, check the following `
 - `my_all` returns `true` if all elements evaluated in a given block return true
 ![my_all](screenshots/my-all.png) 
 
+You can follow the examples to apply the remaining methods. For a deeper understanding check this link 
+[Enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html)
 
 ### Run tests
 
-- no written tests yet
+- This project does not contain tests
+
+### Deployment
+
+- Not needed
 
 ## Authors
 
