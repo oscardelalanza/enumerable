@@ -2,7 +2,7 @@
 
 ##### Advanced Building Blocks - Enumerables
 
-> This is my own implementation of Ruby's enumerable methods. The goal of the project is to get a deep understanding of how basic enumerable methods works.
+> This is my own implementation of Ruby's enumerable methods. The goal of the project is to get a deep understanding of how basic enumerable methods work.
 
 
 ![screenshot](screenshots/enum.png)
