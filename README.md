@@ -49,7 +49,12 @@ Copy and paste `enumerable.rb` file to your current project. Then import the `En
 
 For a better understanding of how enumerable module works, check the following `IRB` examples of usage.
 
+- Importing the `Enumerable` module
 ![import](screenshots/import.png)
+
+- `my_each`
+![my_each](screenshots/my_each.png)
+
 
 ### Run tests
 
