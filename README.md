@@ -52,8 +52,11 @@ For a better understanding of how enumerable module works, check the following `
 - Importing the `Enumerable` module
 ![import](screenshots/import.png)
 
-- `my_each` loops through all the elements inside an array
+- `my_each` calls the given block once for each element in the array
 ![my_each](screenshots/my_each.png)
+
+- `my_each_with_index` calls the given block once for each element and its index in the array
+![my_each_index](screenshots/my-each-index.png)  
 
 
 ### Run tests
