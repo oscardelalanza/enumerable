@@ -68,14 +68,6 @@ For a better understanding of how enumerable module works, check the following `
 
 You can follow this examples to use the remaining methods. For a deeper understanding check this link [Enumerable](https://ruby-doc.org/core-2.7.1/Enumerable.html)
 
-### Run tests
-
-- This project does not contain tests.
-
-### Deployment
-
-- Not needed.
-
 ## Authors
 
 👤 **Oscar De La Lanza**
